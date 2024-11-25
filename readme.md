@@ -4,7 +4,7 @@ This is a technical assessment for a software developer.
 
 ### Scenario
 
-We have been approached by a startup to create a proof of concept for a banking system that will store customers, their bank accounts, and transfers. The startup has an existing mobile app in place, but wants to modernise their backend, moving into Microsoft’s Azure cloud with ASP.NET Core. They wish to use .NET 8, Entity Framework Core and connect to a SQL database. For development purposes, the startup wants to see a proof of concept using SQLite.
+We have been approached by a startup to create a proof of concept for a banking system that will store customers, their bank accounts, and transfers. The startup has an existing mobile app in place, but wants to modernise their backend, moving into Microsoft’s Azure cloud with ASP.NET Core. They wish to use .NET 9, Entity Framework Core and connect to a SQL database. For development purposes, the startup wants to see a proof of concept using SQLite.
 
 The company is looking to invest heavily into software and believe this project will form a backbone to the next decade of their business. Take this into consideration when forming an opinion of how and where to structure code. A future team of developers may work on the system at the same time, which will need architecture that lends itself to a team dynamic.
 
@@ -19,7 +19,7 @@ The company is looking to invest heavily into software and believe this project 
 
 ### Technical specification
 
-This project requires .NET 8 SDK. The solution `TechnicalTest.sln` contains two projects `TechnicalTest.API` and `TechnicalTest.Data`. The API project is the executable web project. The Data project is a class library containing all DAL-relevant infrastructure.
+This project requires the relevant .NET SDK. The solution `TechnicalTest.sln` contains two projects `TechnicalTest.API` and `TechnicalTest.Data`. The API project is the executable web project. The Data project is a class library containing all DAL-relevant infrastructure.
 
 You will also find a `clean.ps1` script, which will irreversibly remove the `bin` and `obj` artifact folders .NET uses at compile and runtime.
 
@@ -27,7 +27,7 @@ The API project has Entity Framework Core 8 and Swagger UI installed. Launching 
 
 Any schema changes you will make need to be reflected in migrations, using the EF Core CLI to generate a new migration. You will find an initial, existing, migration as part of the Data project.
 
-**This project makes use of .NET 8 minimal APIs. If you wish to switch to controllers, please do so.**
+**This project makes use of .NET minimal APIs. If you wish to switch to controllers, please do so.**
 
 **We stress this is only a backend API assessment. This is not a frontend assessment. We do not expect a frontend.**
 

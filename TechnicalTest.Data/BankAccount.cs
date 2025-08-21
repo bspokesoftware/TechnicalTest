@@ -8,5 +8,7 @@ public class BankAccount
     public int CustomerId { get; set; }
     public Customer? Customer { get; set; }
 
+    public ICollection<Transfer> TransfersOut { get; set; } = new HashSet<Transfer>();
+    public ICollection<Transfer> TransfersIn { get; set; } = new HashSet<Transfer>();
 
 }

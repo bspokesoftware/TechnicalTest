@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TechnicalTest.Data.Services
+﻿namespace TechnicalTest.Data.Services.Transfers
 {
     public interface ITransferService
     {

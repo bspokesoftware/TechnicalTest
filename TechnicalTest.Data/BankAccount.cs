@@ -5,6 +5,8 @@ public class BankAccount
     public int Id { get; set; }
     public required string AccountNumber { get; set; }
     public bool IsFrozen { get; set; }
+
+    public decimal Balance { get; set; } = 0;
     public int CustomerId { get; set; }
     public Customer? Customer { get; set; }
 

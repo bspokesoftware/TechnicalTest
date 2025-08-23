@@ -14,8 +14,6 @@ public class ApplicationContext : DbContext
     public DbSet<BankAccount> BankAccounts { get; set; } = null!;
     public DbSet<Transfer> Transfers { get; set; } = null!;
 
-    // Adding rules to database due to this being a banking app
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         //Customer

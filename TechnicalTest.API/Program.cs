@@ -1,7 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+
 using TechnicalTest.API.Models;
+using TechnicalTest.API.Endpoints;
+
 using TechnicalTest.Data;
+using TechnicalTest.Data.Services.BankAccounts;
+using TechnicalTest.Data.Services.Transfers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +15,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ApplicationContext>();
+
+builder.Services.AddScoped<ITransferService, TransferService>();
+builder.Services.AddScoped<IBankAccountService, BankAccountService>();
 
 var app = builder.Build();
 
@@ -57,4 +65,10 @@ app.MapGet("/customers/", (ApplicationContext db) =>
     return Results.Ok(customers);
 });
 
+app.MapTransferEndpoints();
+app.MapBankAccountEndpoints();
+
 app.Run();
+
+// WebApplicationFactory<Program> boot your app in tests
+public partial class Program { }

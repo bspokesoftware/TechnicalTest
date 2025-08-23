@@ -6,7 +6,5 @@ public class Customer
     public required string Name { get; set; }
     public DateTime DateOfBirth { get; set; }
     public decimal DailyTransferLimit { get; set; }
-
-    // Collection of bank accounts owned by a customer
     public ICollection<BankAccount> BankAccounts { get; set; } = new HashSet<BankAccount>();
 }

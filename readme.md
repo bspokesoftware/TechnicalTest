@@ -40,3 +40,5 @@ You are safe to make any assumptions you please about security, functionality th
 ## Submission
 
 Submission can be done via a Git repository, forking this repository or downloading and zipping the contents of the source in an email to the person liaising with you. If you choose to manually zip source, please use the `clean.ps1` script to remove .NET artifacts or manually delete the `bin` and `obj` folders from the relevant project directories.
+
+**Please do not open a pull request. Keep your repository separate from this one.**
